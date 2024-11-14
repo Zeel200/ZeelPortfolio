@@ -66,6 +66,7 @@ input:focus, textarea:focus {
 
 .click {
      transition: all 300ms ease;
+     cursor: pointer;
 }
 
 .title {
@@ -77,10 +78,6 @@ input:focus, textarea:focus {
 
 .orange {
      color: #f06449;
-}
-
-button {
-     cursor: pointer;
 }
 
 .link-hover-effect {
@@ -273,6 +270,7 @@ nav {
      display: flex;
      flex-direction: column;
      justify-content: center;
+     position: relative;
 }
 
 .model-about {
@@ -362,6 +360,54 @@ nav {
      color: #f06449;
 }
 
+.modal-overlay-loading {
+     background-color: #242424;
+     font-size: 80px;
+}
+
+.modal-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     z-index: -1;
+}
+
+.modal-overlay-success {
+     background-color: #4bb543;
+     font-size: 40px;
+     font-weight: 700;
+     text-align: center;
+     padding: 28px;
+}
+
+.fa-spinner {
+     animation: spinner 850ms infinite linear;
+}
+
+@keyframes spinner {
+     0% {
+          transform: rotate(0);
+     }
+
+     100% {
+          transform: rotate(360deg);
+     }
+}
+
+.modal-exit {
+     position: absolute;
+     top: 30px;
+     right: 40px;
+     color: #fff;
+     font-size: 36px;
+     z-index: 100;
+}
+
 /* PROJECTS */
 
 .section-title {
@@ -447,7 +493,7 @@ nav {
 footer {
      background-color: #242424;
      display: flex;
-     padding: 6% 0;
+     padding: 3% 0;
 }
 
 .footer-row {
@@ -457,8 +503,8 @@ footer {
 }
 
 .footer-logo-img {
-     width: 80px;
-     height: 80px;
+     width: 150px;
+     height: 150px;
 }
 
 .footer-social-links {

@@ -7,6 +7,16 @@
      <title>Zeel Patel</title>
      <link rel="stylesheet" href="style.css">
      <script src="https://kit.fontawesome.com/c5c80b9ccc.js" crossorigin="anonymous"></script>
+     <script src="index.js"></script>
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+     </script>
+     <script type="text/javascript">
+          (function () {
+               emailjs.init({
+                    publicKey: "-0iCadj9ZE_Ar500e",
+               });
+          })();
+     </script>
 </head>
 
 <body>
@@ -17,13 +27,16 @@
                </figure>
                <ul class="nav-links-list">
                     <li class="nav-link">
-                         <a href="#" class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect ">About</a>
+                         <a href="#"
+                              class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect ">About</a>
                     </li>
                     <li class="nav-link">
-                         <a href="#" class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Projects</a>
+                         <a href="#"
+                              class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Projects</a>
                     </li>
                     <li class="nav-link">
-                         <a href="#" class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Contact</a>
+                         <a href="#"
+                              class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Contact</a>
                     </li>
                     <li class="nav-link click">
                          <a href="#" class="nav-link-anchor link-hover link-hover-effect-black"><i
@@ -65,9 +78,13 @@
                     <h3 class="model-title model-title-about">Here's bit about me</h3>
                     <h4 class="model-subtitle model-subtitle-about">Frontend Software Engineer</h4>
                     <p class="model-para">
-                         I'm a 22 year old <b class="orange">Frontend Software Engineer</b> with a strong passion for developing websites with great <b class="orange">user experiences</b> .
+                         I'm a 22 year old <b class="orange">Frontend Software Engineer</b> with a strong passion for
+                         developing websites with great <b class="orange">user experiences</b> .
                          <br>
-                         As a recent computer science graduate, I have worked on complex engineering problems alongside some of the most <b class="orange">talented</b> students in the field. This experience has allowed me to grow technically and collaborate effectively with peers who are equally <b class="orange">passionate and skilled</b> .
+                         As a recent computer science graduate, I have worked on complex engineering problems alongside
+                         some of the most <b class="orange">talented</b> students in the field. This experience has
+                         allowed me to grow technically and collaborate effectively with peers who are equally <b
+                              class="orange">passionate and skilled</b> .
                     </p>
                     <div class="model-languages">
                          <figure class="model-language">
@@ -107,10 +124,10 @@
                <div class="model-half model-contact">
                     <h3 class="model-title model-title-contact">Let's have a chat!</h3>
                     <h3 class="model-subtitle model-title-contact">I'm currently open for new opportunities.</h3>
-                    <form action="" id="contact-form">
+                    <form action="" id="contact-form" onsubmit="contact(event)">
                          <div class="form-item">
                               <label class="form-item-lebel">Name</label>
-                              <input type="text" class="input" name="user-name" required></input>
+                              <input type="text" class="input" name="user_name" required></input>
                          </div>
                          <div class="form-item">
                               <label class="form-item-lebel">Email</label>
@@ -122,7 +139,13 @@
                          </div>
                          <button id="contact-subtitle" class="form-submit">Send it my way</button>
                     </form>
+                    <div class="modal-overlay modal-overlay-loading">
+                         <i class="fas fa-spinner"></i>
+                    </div>
+                    <div class="modal-overlay modal-overlay-success">Thanks for the message! Looking forward to speaking
+                         to you soon.</div>
                </div>
+               <i class="fas fa-times modal-exit click"></i>
           </div>
      </section>
 
