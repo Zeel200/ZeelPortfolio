@@ -32,7 +32,8 @@ section {
      background-color: rgb(245, 245, 245);
 }
 
-input, textarea {
+input,
+textarea {
      width: 100%;
      background-color: #242424;
      color: #fff;
@@ -56,11 +57,13 @@ label {
      width: bold;
 }
 
-input:hover, textarea:hover {
+input:hover,
+textarea:hover {
      border-color: #dcdfdc;
 }
 
-input:focus, textarea:focus {
+input:focus,
+textarea:focus {
      border-color: #f06449;
 }
 
@@ -103,9 +106,26 @@ input:focus, textarea:focus {
      background-color: white;
      height: 1.2px;
 }
+
 .link-hover-effect-black::after {
      background-color: black;
      height: 3px;
+}
+
+nav,
+.scroll,
+.header {
+     opacity: 1;
+     visibility: visible;
+     transition: all 400ms 400ms;
+}
+
+.modal-open nav,
+.modal-open .scroll,
+.modal-open .header {
+     opacity: 0;
+     visibility: hidden;
+     transition: all 400ms 200ms;
 }
 
 
@@ -247,9 +267,9 @@ nav {
      font-size: 20px;
 }
 
-/* model */
+/* modal */
 
-.model {
+.modal {
      position: absolute;
      top: 50%;
      left: 50%;
@@ -257,32 +277,49 @@ nav {
      width: 55%;
      max-width: 1100px;
      height: 600px;
-     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
      border-radius: 20px;
      margin-top: 25px;
      overflow: hidden;
      display: flex;
+     visibility: hidden;
+     z-index: -1;
+     transition: visibility 1s, z-index 1s, box-shadow 0.5s ease;
 }
 
-.model-half {
+.modal-open
+.modal {
+     z-index: 60;
+     box-shadow: 0 20px 80px 0 rgb(0, 0, 0, 0.55);
+     visibility: visible;
+}
+
+.modal-half {
      width: 50%;
      padding: 40px 72px;
      display: flex;
      flex-direction: column;
      justify-content: center;
      position: relative;
+     transform: all 300ms ease-in;
 }
 
-.model-about {
+.modal-open .modal-about, 
+.modal-open .modal-contact 
+{
+     transform: translateY(0%);
+}
+
+.modal-about {
      background-color: rgb(245, 245, 245);
+     transform: translateX(-110%);
 }
 
-.model-languages {
+.modal-languages {
      display: flex;
      flex-wrap: wrap;
 }
 
-.model-language {
+.modal-language {
      width: 65px;
      padding: 10px;
      position: relative;
@@ -292,11 +329,11 @@ nav {
      transition: all 300ms ease;
 }
 
-.model-language:hover .language-name {
+.modal-language:hover .language-name {
      transform: scale(1);
 }
 
-.model-language:hover {
+.modal-language:hover {
      filter: brightness(80%);
      transform: scale(0.9);
 }
@@ -310,25 +347,26 @@ nav {
      transition: all 300ms ease;
 }
 
-.model-language-img {
+.modal-language-img {
      width: 100%;
 }
 
-.model-contact {
+.modal-contact {
      background-color: #242424;
      color: white;
+     transform: translateX(110%);
 }
 
-.model-title {
+.modal-title {
      font-size: 26px;
 }
 
-.model-subtitle {
+.modal-subtitle {
      margin: 12px 0 24px 0;
      font-size: 14px;
 }
 
-.model-para {
+.modal-para {
      margin-bottom: 12px;
      line-height: 1.75;
 }
@@ -371,7 +409,7 @@ nav {
      left: 0;
      width: 100%;
      height: 100%;
-     display: flex;
+     display: none;
      align-items: center;
      justify-content: center;
      z-index: -1;
@@ -387,6 +425,7 @@ nav {
 
 .modal-overlay-visible {
      z-index: 1;
+     display: flex;
 }
 
 .fa-spinner {
