@@ -21,27 +21,27 @@
 </head>
 
 <body>
-     <section id="landing-page">
+     <section id="landing-page" onmousemove="moveBackground(event)">
           <nav>
                <figure>
                     <img id="personal-logo" src="./assets/zp-logo.png" alt="logo">
                </figure>
                <ul class="nav-links-list">
-                    <li class="nav-link">
+                    <!-- <li class="nav-link" onclick="toggleModal()">
                          <a href="#"
                               class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect ">About</a>
-                    </li>
-                    <li class="nav-link" onclick="toggleModal()">
-                         <a href="#"
+                    </li> -->
+                    <li class="nav-link">
+                         <a href="#projects"
                               class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Projects</a>
                     </li>
                     <li class="nav-link">
-                         <a href="#"
+                         <a href="#" onclick="toggleModal()"
                               class="nav-link-anchor link-hover link-hover-effect-black link-hover-effect">Contact</a>
                     </li>
-                    <li class="nav-link click">
+                    <li class="nav-link click" onclick="toggleContrast()">
                          <a href="#" class="nav-link-anchor link-hover link-hover-effect-black"><i
-                                   class="fa-solid fa-circle-half-stroke"></i></a>
+                                   class="fas fa-adjust"></i></a>
                     </li>
                </ul>
           </nav>
@@ -54,13 +54,13 @@
                          with a strong passion for building web applications with great user experiences. <br>
                          Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b></p>
                     <div class="social-lists">
-                         <a href="" class="social-link click">
+                         <a href="https://www.linkedin.com/in/zeelpatel03/" target="_blank" class="social-link click">
                               <i class="fa-brands fa-linkedin-in"></i>
                          </a>
-                         <a href="" class="social-link click">
+                         <a href="https://github.com/Zeel200" target="_blank" class="social-link click">
                               <i class="fa-brands fa-github"></i>
                          </a>
-                         <a href="" class="social-link click">
+                         <a href="./assets/Resume.pdf" target="_blank" class="social-link click">
                               <i class="fa-solid fa-file-pdf"></i>
                          </a>
                     </div>
@@ -129,15 +129,15 @@
                     <form action="" id="contact-form" onsubmit="contact(event)">
                          <div class="form-item">
                               <label class="form-item-lebel">Name</label>
-                              <input type="text" class="input" name="user_name" ></input>
+                              <input type="text" class="input" name="user_name"></input>
                          </div>
                          <div class="form-item">
                               <label class="form-item-lebel">Email</label>
-                              <input type="text" class="input" name="user_email" ></input>
+                              <input type="text" class="input" name="user_email"></input>
                          </div>
                          <div class="form-item">
                               <label class="form-item-lebel">Message</label>
-                              <textarea type="text" class="input" name="message" ></textarea>
+                              <textarea type="text" class="input" name="message"></textarea>
                          </div>
                          <button id="contact-subtitle" class="form-submit">Send it my way</button>
                     </form>
@@ -148,6 +148,15 @@
                          with you soon.</div>
                </div>
           </div>
+          <img src="./assets/semi circle.svg" class="shape shape-0">
+          <img src="./assets/circle.svg" class="shape shape-1">
+          <img src="./assets/squiggly.svg" class="shape shape-2">
+          <img src="./assets/circle.svg" class="shape shape-3">
+          <img src="./assets/triangle.svg" class="shape shape-4">
+          <img src="./assets/circle.svg" class="shape shape-5">
+          <img src="./assets/squiggly.svg" class="shape shape-6">
+          <img src="./assets/circle.svg" class="shape shape-7">
+          <img src="./assets/circle.svg" class="shape shape-8">
      </section>
 
      <section id="projects">
@@ -199,10 +208,12 @@
                          <img src="./assets/zp-logo.png" alt="" class="footer-logo-img">
                     </figure>
                     <div class="footer-social-links">
-                         <a href="" class="footer-social-link link-hover-effect link-hover-effect-white">GitHub</a>
-                         <a href="" class="footer-social-link link-hover-effect link-hover-effect-white">Linkedin</a>
-                         <a href="" class="footer-social-link link-hover-effect link-hover-effect-white">Contact</a>
-                         <a href="" class="footer-social-link link-hover-effect link-hover-effect-white">Resume</a>
+                         <a href="https://github.com/Zeel200" target="_blank"
+                              class="footer-social-link link-hover-effect link-hover-effect-white">GitHub</a>
+                         <a href="https://www.linkedin.com/in/zeelpatel03/" target="_blank"
+                              class="footer-social-link link-hover-effect link-hover-effect-white">Linkedin</a>
+                         <a href="#" onclick="toggleModal()" class="footer-social-link link-hover-effect link-hover-effect-white">Contact</a>
+                         <a href="./assets/Resume.pdf" target="_blank" class="footer-social-link link-hover-effect link-hover-effect-white">Resume</a>
                     </div>
                     <div class="footer-copyright">Copyright 2024 &copy; Zeel Patel</div>
                </div>
