@@ -735,3 +735,9 @@ width = 80vw
           padding: 30px;
      }
 }
+
+@media(max-width: 490px) {
+     .shape {
+          display: none;
+     }
+}
