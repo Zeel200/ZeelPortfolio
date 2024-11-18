@@ -497,6 +497,10 @@ nav {
 
 /* PROJECTS */
 
+.project {
+     margin-bottom: 90px;
+}
+
 .section-title {
      text-align: center;
      font-size: 48px;
@@ -691,6 +695,7 @@ width = 80vw
      .header-para {
           font-size: 20px;
      }
+
      .modal {
           top: 0;
           left: 0;
@@ -700,6 +705,7 @@ width = 80vw
           flex-direction: column-reverse;
           border-radius: 0;
      }
+
      .modal-half {
           width: 100%;
      }
@@ -719,19 +725,23 @@ width = 80vw
      .nav-link:first-child {
           display: none;
      }
+
      .project-description-para {
           display: none;
      }
+
      .project-description {
           left: 0;
           padding: 0;
           width: 100%;
           text-align: center;
      }
-     .project-description-subtitle{
+
+     .project-description-subtitle {
           margin-bottom: 8px;
      }
-     .modal-half{
+
+     .modal-half {
           padding: 30px;
      }
 }
